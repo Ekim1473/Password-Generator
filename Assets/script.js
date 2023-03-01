@@ -1,5 +1,12 @@
 // Assignment Code
 const generatePassword = (length, hasNumbers,hasSymbols, hasLowercase, hasUppercase) =>{
+
+  let passWordlength = prompt ("Password length: Choose a number between 8 and 128");
+  let includeNumbers = prompt ("Do you want to include Numbers?");
+  let includeSymbols = prompt ("Do you want to inlcude Symbols?");
+  let includeUpper = prompt ("Do you want to include uppercase letters?");
+  let includeLower = prompt ("Do you want to include lowercase letters");
+   
   const availableCharacters = [
     ...(hasSymbols ? symbols : []),
     ...(hasNumbers ? numbers : []),
@@ -7,12 +14,10 @@ const generatePassword = (length, hasNumbers,hasSymbols, hasLowercase, hasUpperc
     ...(hasLowercase ? charlow : []),
   ];
 
-
 const numbers = (0,1,2,3,4,5,6,7,8,9);
 const symbols = ("!","@","#","%","^","&","*","?","$");
 const charlow = ("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z");
 const charup = ("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
-
 
 
   let password = "";
@@ -24,9 +29,9 @@ const charup = ("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
    password += availableCharacters[randomIndex];
   }
   return password;
-
+  
 };
-
+console.log(password);
 
 var generateBtn = document.querySelector("#generate");
 
@@ -39,10 +44,5 @@ function writePassword() {
 };
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
 
-let passWordlength = prompt ("Password length: Choose a number between 8 and 128");
-let includeNumbers = prompt ("Do you want to include Numbers?");
-let includeSymbols = prompt ("Do you want to inlcude Symbols?");
-let includeUpper = prompt ("Do you want to include uppercase letters?");
-let includeLower = prompt ("Do you want to include lowercase letters");
