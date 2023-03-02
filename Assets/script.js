@@ -44,11 +44,11 @@ let availableCharacters = []
   console.log(availableCharacters);
   let password = "";
   
-  for(let i = 0; i <length; i++) {
-   const randomIndex = Math.floor(math.random() * availableCharacters.length);
+  for(let i = 0; i <passWordlength; i++) {
+   const randomIndex = Math.floor(Math.random() * availableCharacters.length);
    password += availableCharacters[randomIndex];
   }
-  console.log(randomIndex);
+  
   return password;
   
 };
@@ -67,7 +67,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 // function writePassword() {
-  
+
 //   return password
 // };
 
